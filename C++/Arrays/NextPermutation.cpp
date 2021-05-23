@@ -2,6 +2,13 @@
 ///LC 31
 ////  https://www.interviewbit.com/problems/next-permutation/
 
+/*steps:
+1. find position where the decreasing array stops, for 1 3 5 4 2 , pos = 1
+2. find number which is greater than number at pos from the end, here 4 , pos2 =3
+3. swap number at ps and pos2
+4. reverse the entire array from pos+1 to end
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution
