@@ -11,7 +11,7 @@ class Solution
         vector<int> res;
         queue<int> q;
         unordered_map<int, bool> visited;
-	   for (int i = 0; i < V; i++)
+	   for (int i = 0; i < nodes; i++)
         {
             if (!visited[i])
             {
