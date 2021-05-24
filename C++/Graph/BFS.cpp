@@ -11,23 +11,26 @@ class Solution
         vector<int> res;
         queue<int> q;
         unordered_map<int, bool> visited;
-
-        q.push(0); /// graph starts with 0
-        visited[0] = true;
-        res.emplace_back(0);
-        while (!q.empty())
+	   for (int i = 0; i < V; i++)
         {
-            int k = q.front();
-            q.pop();
-            if (!visited[k])
+            if (!visited[i])
             {
-                visited[k] = true;
-                res.push_back(k);
-            }
-            for (int x = 0; x < adj[k].size(); x++)
-            {
-                if (!visited[adj[k][x]])
-                    q.push(adj[k][x]);
+                q.push(i); /// graph starts with 0
+                visited[i] = true;
+                while (!q.empty())
+                {
+                    int k = q.front();
+                    q.pop();
+                    res.push_back(k);
+                    for (auto it : adj[k])
+                    {
+                        if (!visited[it])
+                        {
+                            q.push(it);
+                            visited[it] = true;
+                        }
+                    }
+                }
             }
         }
         return res;
