@@ -6,7 +6,7 @@
 using namespace std;
 class Solution
 {
-public:
+    public:
     //// takes more time
     int firstMissingPositiveLT(vector<int> &nums)
     {
@@ -50,7 +50,7 @@ public:
 
     ///// TLE but accepted in interview bit
 
-    int firstMissingPositiveTLE(vector<int> &nums)
+    int firstMissingPositiveTLE(vector<int> &A)
     {
         int max = *max_element(A.begin(), A.end());
         if (max <= 0)
