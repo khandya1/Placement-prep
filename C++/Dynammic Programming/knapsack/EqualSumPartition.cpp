@@ -15,11 +15,11 @@ public:
             return false;
         int n = nums.size();
         bool dp[n+1][sum/2 +1];
-        dp[0][0]=true;
+        dp[0][0]=true; // sum 0 element 0 is possible
         for(int i=1;i<=sum/2;i++)
             dp[0][i]=false;
         for(int i=1;i<=n;i++)
-            dp[i][0]=true;
+            dp[i][0]=true; //// if don't take the element sum 0 is possible-> across the row 
         for(int i =1;i<=n;i++)
         {
             for(int j=1;j<=sum/2;j++)
@@ -28,7 +28,7 @@ public:
                 if(nums[i-1]>j)
                     dp[i][j]=dp[i-1][j];
                 else
-                    dp[i][j]=dp[i-1][j-nums[i-1]]||dp[i-1][j];
+                    dp[i][j]=dp[i-1][j-nums[i-1]]||dp[i-1][j];/// if we decrease the element the remaining sum should be possible
             }
         }
         return dp[n][sum/2];
