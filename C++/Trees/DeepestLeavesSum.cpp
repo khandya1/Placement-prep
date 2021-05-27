@@ -1,6 +1,6 @@
 
 //// https://leetcode.com/problems/deepest-leaves-sum/
-//// lc 1302
+//// lc 1302 Medium
 
 #include <bits/stdc++.h>
 #include "TreeCreation.cpp"
