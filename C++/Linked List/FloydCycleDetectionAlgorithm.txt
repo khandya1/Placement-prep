@@ -37,3 +37,9 @@ Assume
 
 This is  Floyd's Tortoise and Hare Algorithm:  Finding a Cycle in a Linked List 
 */ 
+
+https://leetcode.com/problems/find-the-duplicate-number/
+
+https://leetcode.com/problems/linked-list-cycle-ii/
+
+
