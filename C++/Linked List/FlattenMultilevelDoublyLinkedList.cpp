@@ -34,6 +34,7 @@ public:
                     continue;
                 }
                 Node *next_node= temp->next; // this next node pointer is required to remove infinte loop
+                
 
                 temp->next = node_child;
                 node_child->prev = temp;
