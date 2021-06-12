@@ -34,4 +34,19 @@ public:
         return dp[n][sum/2];
         
     }
+
+    bool equalSum(int nums[], int n, int sum , int pos)
+    {
+        if(sum==0)
+        return true;
+        if(n==pos)
+        return false;
+
+        if(nums[pos]>sum)
+        return equalSum(nums, n, sum, pos+1);
+        else
+        return equalSum(nums, n, sum, pos+1)|| equalSum(nums,n,sum-nums[pos],pos+1);
+      
+    }
+
 };
