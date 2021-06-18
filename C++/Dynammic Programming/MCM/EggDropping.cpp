@@ -40,6 +40,7 @@ public:
     {
         for (int gap = 0; gap < dp[0].size(); gap++)
         {
+            
             for (int i = 0, j = gap; i < dp.size() && j < dp[0].size(); i++, j++)
             {
                 if (j == 0 || j == 1 || i == 1)
