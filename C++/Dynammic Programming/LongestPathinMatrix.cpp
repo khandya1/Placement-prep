@@ -10,7 +10,7 @@ public:
         if (i >= n || j >= n || j < 0 || i < 0)
             return 0;
 
-        cout << dp[i][j] << " " << i << " " << j << "\n";
+      //  cout << dp[i][j] << " " << i << " " << j << "\n";
         if (dp[i][j] != -1)
             return dp[i][j];
 
@@ -51,6 +51,13 @@ int main()
         {
             res = max(res, s.DFS(dp, mat, i, j, 3));
         }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        cout<<dp[i][j]<<" ";
+    
+    cout<<"\n";
     }
     cout << "Length of the longest path is " << res;
     return 0;
